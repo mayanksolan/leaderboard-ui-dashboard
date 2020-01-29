@@ -1,0 +1,207 @@
+/* Created by Vipin Kumar */
+@font-face {
+  font-family: "LibreBaskerville";
+  src: url("font/LibreBaskerville-Regular.eot");
+  src: url("font/LibreBaskerville-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("font/LibreBaskerville-Regular.woff") format("woff"),
+    url("font/LibreBaskerville-Regular.ttf") format("truetype"),
+    url("font/LibreBaskerville-Regular.svg#svgFontName") format("svg");
+}
+@font-face {
+  font-family: "NunitoSans";
+  src: url("font/NunitoSans-Regular.eot");
+  src: url("font/NunitoSans-Regular.eot?#iefix") format("embedded-opentype"),
+    url("font/NunitoSans-Regular.woff") format("woff"),
+    url("font/NunitoSans-Regular.ttf") format("truetype"),
+    url("font/NunitoSans-Regular.svg#svgFontName") format("svg");
+}
+/* Reset CSS */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+a {
+  text-decoration: none;
+  outline: none;
+  color: #5a87d2;
+}
+ol,
+ul,
+ol li,
+ul li {
+  list-style: none;
+}
+button {
+  cursor: pointer;
+}
+body {
+  font-size: 18px;
+  color: #444444;
+  font-family: NunitoSans;
+  font-weight: normal;
+  overflow-x: hidden;
+}
+.noscroll {
+  overflow: hidden;
+}
+/* .-Reset CSS */
+.clear {
+  clear: both;
+}
+.flt-left {
+  float: left;
+}
+.flt-right {
+  float: right;
+}
+.full-width {
+  width: 100%;
+}
+.btn-fill {
+  border-radius: 4px;
+  background-color: #eb8888;
+  padding: 0 30px;
+  border: 0;
+  height: 36px;
+  font-size: 11px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+.btn-fill:hover {
+  background-color: #ef8075;
+}
+.btn-fill img {
+  padding-right: 5px;
+}
+.btn-outline {
+  border-radius: 4px;
+  border: solid 2px #eb8888;
+  background: none;
+  color: #eb8888;
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  height: 36px;
+  text-transform: uppercase;
+}
+main {
+  width: 100%;
+  position: relative;
+  background-color: #ffffff;
+  z-index: 1;
+}
+.diagonal {
+  z-index: 1;
+}
+.diagonal::before {
+  -webkit-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+  -webkit-transform-origin: 3% 0;
+  transform-origin: 3% 0;
+  top: 0;
+  left: -25%;
+  z-index: -1;
+  width: 150%;
+  height: 100%;
+  background: inherit;
+}
+h1 {
+  font-family: LibreBaskerville;
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: normal;
+  color: #444444;
+}
+h2 {
+  font-family: LibreBaskerville;
+  font-size: 28px;
+  font-weight: normal;
+  line-height: 34px;
+  color: #444444;
+}

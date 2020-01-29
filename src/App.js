@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import axios from "axios";
+import LbIndex from "./components/lbIndex";
+import LbWinners from "./components/lbWinners";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import "./App.css";
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      competitions: {},
+      nonprofits: {}
+    };
+  }
+
+  async componentDidMount() {
+    const res = await axios.get(
+      "https://staging.letzchange.org/api/events/housie19"
+    );
+    this.setState({
+      competitions: res.data.meta.competitions,
+      nonprofits: res.data.meta.nonprofits
+    });
+  }
+  render() {
+    return (
+      <BrowserRouter>
+        <div className="App">
+          <Switch>
+            <Route
+              exact
+              path="/"
+              render={() => <LbWinners stateData={this.state} />}
+            />
+            <Route exact path="/rules" component={LbIndex} />
+          </Switch>
+        </div>
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;
